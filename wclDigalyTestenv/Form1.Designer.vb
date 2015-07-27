@@ -38,6 +38,8 @@ Partial Class Form1
         Me.DyTextboxBorder1 = New wclDigaly.dyTextboxBorder()
         Me.DyTextboxBorder2 = New wclDigaly.dyTextboxBorder()
         Me.DyTextboxBorder3 = New wclDigaly.dyTextboxBorder()
+        Me.DyTextboxBorder4 = New wclDigaly.dyTextboxBorder()
+        Me.DyTextboxBorder5 = New wclDigaly.dyTextboxBorder()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -225,10 +227,10 @@ Partial Class Form1
         Me.DyTextboxBorder2.BorderWidth = 5
         Me.DyTextboxBorder2.FontTextbox = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DyTextboxBorder2.ForeColorTextbox = System.Drawing.Color.Black
-        Me.DyTextboxBorder2.Location = New System.Drawing.Point(617, 125)
+        Me.DyTextboxBorder2.Location = New System.Drawing.Point(552, 101)
         Me.DyTextboxBorder2.MultiLine = False
         Me.DyTextboxBorder2.Name = "DyTextboxBorder2"
-        Me.DyTextboxBorder2.Size = New System.Drawing.Size(131, 23)
+        Me.DyTextboxBorder2.Size = New System.Drawing.Size(214, 23)
         Me.DyTextboxBorder2.TabIndex = 21
         '
         'DyTextboxBorder3
@@ -244,12 +246,41 @@ Partial Class Form1
         Me.DyTextboxBorder3.Size = New System.Drawing.Size(131, 23)
         Me.DyTextboxBorder3.TabIndex = 22
         '
+        'DyTextboxBorder4
+        '
+        Me.DyTextboxBorder4.BackgroundImage = Nothing
+        Me.DyTextboxBorder4.BorderColorTextbox = System.Drawing.Color.Red
+        Me.DyTextboxBorder4.BorderWidth = 5
+        Me.DyTextboxBorder4.FontTextbox = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DyTextboxBorder4.ForeColorTextbox = System.Drawing.Color.Blue
+        Me.DyTextboxBorder4.Location = New System.Drawing.Point(517, 271)
+        Me.DyTextboxBorder4.MultiLine = False
+        Me.DyTextboxBorder4.Name = "DyTextboxBorder4"
+        Me.DyTextboxBorder4.Size = New System.Drawing.Size(249, 23)
+        Me.DyTextboxBorder4.TabIndex = 23
+        '
+        'DyTextboxBorder5
+        '
+        Me.DyTextboxBorder5.BackgroundImage = Nothing
+        Me.DyTextboxBorder5.BorderColorTextbox = System.Drawing.Color.CornflowerBlue
+        Me.DyTextboxBorder5.BorderWidth = 25
+        Me.DyTextboxBorder5.FontTextbox = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DyTextboxBorder5.ForeColorTextbox = System.Drawing.Color.Black
+        Me.DyTextboxBorder5.Location = New System.Drawing.Point(840, 120)
+        Me.DyTextboxBorder5.MultiLine = True
+        Me.DyTextboxBorder5.Name = "DyTextboxBorder5"
+        Me.DyTextboxBorder5.Size = New System.Drawing.Size(305, 108)
+        Me.DyTextboxBorder5.TabIndex = 24
+        Me.DyTextboxBorder5.Text = "test"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(885, 350)
+        Me.ClientSize = New System.Drawing.Size(1157, 350)
+        Me.Controls.Add(Me.DyTextboxBorder5)
+        Me.Controls.Add(Me.DyTextboxBorder4)
         Me.Controls.Add(Me.DyTextboxBorder3)
         Me.Controls.Add(Me.DyTextboxBorder2)
         Me.Controls.Add(Me.DyTextboxBorder1)
@@ -287,4 +318,6 @@ Partial Class Form1
     Friend WithEvents DyTextboxBorder1 As wclDigaly.dyTextboxBorder
     Friend WithEvents DyTextboxBorder2 As wclDigaly.dyTextboxBorder
     Friend WithEvents DyTextboxBorder3 As wclDigaly.dyTextboxBorder
+    Friend WithEvents DyTextboxBorder4 As wclDigaly.dyTextboxBorder
+    Friend WithEvents DyTextboxBorder5 As wclDigaly.dyTextboxBorder
 End Class

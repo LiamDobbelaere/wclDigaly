@@ -114,7 +114,7 @@ Public Class dyTextboxBorder
             If (specified And BoundsSpecified.Height) = 0 OrElse height = DyTextbox1.Height Then
                 MyBase.SetBoundsCore(x, y, width, DyTextbox1.Height, specified)
             Else
-                ' RETURN WITHOUT DOING ANY RESIZING
+                MyBase.SetBoundsCore(x, y, width, height, specified)
                 Return
             End If
         Else
