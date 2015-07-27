@@ -300,11 +300,11 @@ Partial Class Form1
         Me.DyFlatButton6.ColorIconsColor = System.Drawing.Color.Red
         Me.DyFlatButton6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DyFlatButton6.ForeColor = System.Drawing.Color.White
-        Me.DyFlatButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.DyFlatButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.DyFlatButton6.Location = New System.Drawing.Point(552, 240)
         Me.DyFlatButton6.Name = "DyFlatButton6"
         Me.DyFlatButton6.ScaleIcons = True
-        Me.DyFlatButton6.Size = New System.Drawing.Size(265, 44)
+        Me.DyFlatButton6.Size = New System.Drawing.Size(265, 86)
         Me.DyFlatButton6.TabIndex = 16
         Me.DyFlatButton6.Text = "Padding 5"
         '

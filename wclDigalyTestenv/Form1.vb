@@ -23,13 +23,13 @@ Public Class Form1
         MessageBox.Show("doushite digaru")
     End Sub
 
-    Private Sub DySlider1_ValueChanged() Handles DySlider1.ValueChanged
+    Private Sub DySlider1_ValueChanged()
         DyGrid1.GridSize = DySlider1.Value
         DyTest1.Value = DySlider1.Value
         DyMarqueeBar1.Value = DySlider1.Value
     End Sub
 
-    Private Sub DyFlatButton3_Click(sender As Object, e As EventArgs) Handles DyFlatButton3.Click
+    Private Sub DyFlatButton3_Click(sender As Object, e As EventArgs)
         MessageBox.Show("wow")
     End Sub
 
