@@ -74,6 +74,16 @@ Public Class dyFlatButton
     End Property
 
     <Browsable(False)>
+    Public Overloads Property Padding As Padding
+        Get
+            Return Nothing
+        End Get
+        Set(value As Padding)
+
+        End Set
+    End Property
+
+    <Browsable(False)>
     Public Overloads Property BackgroundImageLayout As ImageLayout
         Get
             Return Nothing
@@ -84,7 +94,7 @@ Public Class dyFlatButton
     End Property
 
 
-    Public Overloads Property Padding As Padding
+    Public Property ImagePadding As Padding
         Get
             Return pdePadding
         End Get

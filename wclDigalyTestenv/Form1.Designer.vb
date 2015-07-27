@@ -81,6 +81,7 @@ Partial Class Form1
         Me.DyFlatButton4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DyFlatButton4.ForeColor = System.Drawing.Color.White
         Me.DyFlatButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.DyFlatButton4.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.DyFlatButton4.Location = New System.Drawing.Point(343, 197)
         Me.DyFlatButton4.Name = "DyFlatButton4"
         Me.DyFlatButton4.ScaleIcons = True
@@ -99,6 +100,7 @@ Partial Class Form1
         Me.DyFlatButton3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DyFlatButton3.ForeColor = System.Drawing.Color.White
         Me.DyFlatButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.DyFlatButton3.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.DyFlatButton3.Location = New System.Drawing.Point(177, 197)
         Me.DyFlatButton3.Name = "DyFlatButton3"
         Me.DyFlatButton3.ScaleIcons = True
@@ -149,6 +151,7 @@ Partial Class Form1
         Me.DyFlatButton8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DyFlatButton8.ForeColor = System.Drawing.Color.White
         Me.DyFlatButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.DyFlatButton8.ImagePadding = New System.Windows.Forms.Padding(10)
         Me.DyFlatButton8.Location = New System.Drawing.Point(516, 171)
         Me.DyFlatButton8.Name = "DyFlatButton8"
         Me.DyFlatButton8.ScaleIcons = True
@@ -166,6 +169,7 @@ Partial Class Form1
         Me.DyFlatButton7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DyFlatButton7.ForeColor = System.Drawing.Color.White
         Me.DyFlatButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.DyFlatButton7.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.DyFlatButton7.Location = New System.Drawing.Point(504, 55)
         Me.DyFlatButton7.Name = "DyFlatButton7"
         Me.DyFlatButton7.ScaleIcons = True
@@ -184,6 +188,7 @@ Partial Class Form1
         Me.DyFlatButton5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DyFlatButton5.ForeColor = System.Drawing.Color.White
         Me.DyFlatButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.DyFlatButton5.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.DyFlatButton5.Location = New System.Drawing.Point(504, 12)
         Me.DyFlatButton5.Name = "DyFlatButton5"
         Me.DyFlatButton5.ScaleIcons = True
@@ -202,6 +207,7 @@ Partial Class Form1
         Me.DyFlatButton2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DyFlatButton2.ForeColor = System.Drawing.Color.White
         Me.DyFlatButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.DyFlatButton2.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.DyFlatButton2.Location = New System.Drawing.Point(12, 197)
         Me.DyFlatButton2.Name = "DyFlatButton2"
         Me.DyFlatButton2.ScaleIcons = True
@@ -230,6 +236,7 @@ Partial Class Form1
         Me.DyFlatButton1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DyFlatButton1.ForeColor = System.Drawing.Color.White
         Me.DyFlatButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.DyFlatButton1.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.DyFlatButton1.Location = New System.Drawing.Point(43, 65)
         Me.DyFlatButton1.Name = "DyFlatButton1"
         Me.DyFlatButton1.ScaleIcons = True
@@ -248,6 +255,7 @@ Partial Class Form1
         Me.DyFlatButton9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DyFlatButton9.ForeColor = System.Drawing.Color.White
         Me.DyFlatButton9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.DyFlatButton9.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.DyFlatButton9.Location = New System.Drawing.Point(561, 125)
         Me.DyFlatButton9.Name = "DyFlatButton9"
         Me.DyFlatButton9.ScaleIcons = True
@@ -266,6 +274,7 @@ Partial Class Form1
         Me.DyFlatButton10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DyFlatButton10.ForeColor = System.Drawing.Color.White
         Me.DyFlatButton10.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.DyFlatButton10.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.DyFlatButton10.Location = New System.Drawing.Point(516, 386)
         Me.DyFlatButton10.Name = "DyFlatButton10"
         Me.DyFlatButton10.ScaleIcons = True
@@ -283,6 +292,7 @@ Partial Class Form1
         Me.DyFlatButton11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DyFlatButton11.ForeColor = System.Drawing.Color.White
         Me.DyFlatButton11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.DyFlatButton11.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.DyFlatButton11.Location = New System.Drawing.Point(-22, 332)
         Me.DyFlatButton11.Name = "DyFlatButton11"
         Me.DyFlatButton11.ScaleIcons = True
@@ -301,6 +311,7 @@ Partial Class Form1
         Me.DyFlatButton6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DyFlatButton6.ForeColor = System.Drawing.Color.White
         Me.DyFlatButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.DyFlatButton6.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.DyFlatButton6.Location = New System.Drawing.Point(552, 240)
         Me.DyFlatButton6.Name = "DyFlatButton6"
         Me.DyFlatButton6.ScaleIcons = True
@@ -319,6 +330,7 @@ Partial Class Form1
         Me.DyFlatButton12.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DyFlatButton12.ForeColor = System.Drawing.Color.White
         Me.DyFlatButton12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.DyFlatButton12.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.DyFlatButton12.Location = New System.Drawing.Point(609, 399)
         Me.DyFlatButton12.Name = "DyFlatButton12"
         Me.DyFlatButton12.ScaleIcons = True
