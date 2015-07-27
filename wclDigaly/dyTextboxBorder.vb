@@ -97,6 +97,16 @@ Public Class dyTextboxBorder
         End Set
     End Property
 
+    <Browsable(True), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)>
+    Public Overrides Property Text As String
+        Get
+            Return DyTextbox1.Text
+        End Get
+        Set(value As String)
+            DyTextbox1.Text = value
+        End Set
+    End Property
+
     Protected Overrides Sub SetBoundsCore(x As Integer, y As Integer, width As Integer, height As Integer, specified As BoundsSpecified)
         ' EDIT: ADD AN EXTRA HEIGHT VALIDATION TO AVOID INITIALIZATION PROBLEMS
         ' BITWISE 'AND' OPERATION: IF ZERO THEN HEIGHT IS NOT INVOLVED IN THIS OPERATION

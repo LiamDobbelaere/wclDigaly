@@ -216,6 +216,7 @@ Partial Class Form1
         Me.DyTextboxBorder1.Name = "DyTextboxBorder1"
         Me.DyTextboxBorder1.Size = New System.Drawing.Size(250, 57)
         Me.DyTextboxBorder1.TabIndex = 20
+        Me.DyTextboxBorder1.Text = "test"
         '
         'DyTextboxBorder2
         '
