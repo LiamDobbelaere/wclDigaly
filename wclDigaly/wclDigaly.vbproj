@@ -94,6 +94,18 @@
     <Compile Include="dySlider.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="dyTextbox.Designer.vb">
+      <DependentUpon>dyTextbox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dyTextbox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dyTextboxBorder.Designer.vb">
+      <DependentUpon>dyTextboxBorder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dyTextboxBorder.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="dyWin7Progress.Designer.vb">
       <DependentUpon>dyWin7Progress.vb</DependentUpon>
     </Compile>
@@ -117,6 +129,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="dyTextboxBorder.resx">
+      <DependentUpon>dyTextboxBorder.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>

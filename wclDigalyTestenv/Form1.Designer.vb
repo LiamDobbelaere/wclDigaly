@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.DyProgressBar1 = New wclDigaly.dyProgressBar()
@@ -30,17 +30,14 @@ Partial Class Form1
         Me.DyTest1 = New wclDigaly.dyWin7Progress()
         Me.DySlider1 = New wclDigaly.dySlider()
         Me.DyGrid1 = New wclDigaly.dyGrid()
-        Me.DyFlatButton8 = New wclDigaly.dyFlatButton()
-        Me.DyFlatButton7 = New wclDigaly.dyFlatButton()
-        Me.DyFlatButton5 = New wclDigaly.dyFlatButton()
         Me.DyFlatButton2 = New wclDigaly.dyFlatButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DyFlatButton1 = New wclDigaly.dyFlatButton()
-        Me.DyFlatButton9 = New wclDigaly.dyFlatButton()
-        Me.DyFlatButton10 = New wclDigaly.dyFlatButton()
-        Me.DyFlatButton11 = New wclDigaly.dyFlatButton()
-        Me.DyFlatButton6 = New wclDigaly.dyFlatButton()
-        Me.DyFlatButton12 = New wclDigaly.dyFlatButton()
+        Me.DyTextbox1 = New wclDigaly.dyTextbox()
+        Me.DyTextbox2 = New wclDigaly.dyTextbox()
+        Me.DyTextboxBorder1 = New wclDigaly.dyTextboxBorder()
+        Me.DyTextboxBorder2 = New wclDigaly.dyTextboxBorder()
+        Me.DyTextboxBorder3 = New wclDigaly.dyTextboxBorder()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -140,62 +137,6 @@ Partial Class Form1
         Me.DyGrid1.TabIndex = 1
         Me.DyGrid1.Text = "DyGrid1"
         '
-        'DyFlatButton8
-        '
-        Me.DyFlatButton8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(11, Byte), Integer))
-        Me.DyFlatButton8.BackgroundImage = Nothing
-        Me.DyFlatButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.DyFlatButton8.ButtonImage = Global.wclDigalyTestenv.My.Resources.Resources.save_icon
-        Me.DyFlatButton8.ColorIcons = True
-        Me.DyFlatButton8.ColorIconsColor = System.Drawing.Color.Blue
-        Me.DyFlatButton8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DyFlatButton8.ForeColor = System.Drawing.Color.White
-        Me.DyFlatButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.DyFlatButton8.ImagePadding = New System.Windows.Forms.Padding(10)
-        Me.DyFlatButton8.Location = New System.Drawing.Point(516, 171)
-        Me.DyFlatButton8.Name = "DyFlatButton8"
-        Me.DyFlatButton8.ScaleIcons = True
-        Me.DyFlatButton8.Size = New System.Drawing.Size(301, 44)
-        Me.DyFlatButton8.TabIndex = 12
-        '
-        'DyFlatButton7
-        '
-        Me.DyFlatButton7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(11, Byte), Integer))
-        Me.DyFlatButton7.BackgroundImage = Nothing
-        Me.DyFlatButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.DyFlatButton7.ButtonImage = Global.wclDigalyTestenv.My.Resources.Resources.save_icon
-        Me.DyFlatButton7.ColorIcons = False
-        Me.DyFlatButton7.ColorIconsColor = System.Drawing.Color.White
-        Me.DyFlatButton7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DyFlatButton7.ForeColor = System.Drawing.Color.White
-        Me.DyFlatButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.DyFlatButton7.ImagePadding = New System.Windows.Forms.Padding(0)
-        Me.DyFlatButton7.Location = New System.Drawing.Point(504, 55)
-        Me.DyFlatButton7.Name = "DyFlatButton7"
-        Me.DyFlatButton7.ScaleIcons = True
-        Me.DyFlatButton7.Size = New System.Drawing.Size(369, 64)
-        Me.DyFlatButton7.TabIndex = 11
-        Me.DyFlatButton7.Text = "DyFlatButton7"
-        '
-        'DyFlatButton5
-        '
-        Me.DyFlatButton5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(11, Byte), Integer))
-        Me.DyFlatButton5.BackgroundImage = Nothing
-        Me.DyFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.DyFlatButton5.ButtonImage = Global.wclDigalyTestenv.My.Resources.Resources.save_icon
-        Me.DyFlatButton5.ColorIcons = False
-        Me.DyFlatButton5.ColorIconsColor = System.Drawing.Color.White
-        Me.DyFlatButton5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DyFlatButton5.ForeColor = System.Drawing.Color.White
-        Me.DyFlatButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.DyFlatButton5.ImagePadding = New System.Windows.Forms.Padding(0)
-        Me.DyFlatButton5.Location = New System.Drawing.Point(504, 12)
-        Me.DyFlatButton5.Name = "DyFlatButton5"
-        Me.DyFlatButton5.ScaleIcons = True
-        Me.DyFlatButton5.Size = New System.Drawing.Size(159, 37)
-        Me.DyFlatButton5.TabIndex = 9
-        Me.DyFlatButton5.Text = "DyFlatButton5"
-        '
         'DyFlatButton2
         '
         Me.DyFlatButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(11, Byte), Integer))
@@ -244,114 +185,75 @@ Partial Class Form1
         Me.DyFlatButton1.TabIndex = 0
         Me.DyFlatButton1.Text = "DyFlatButton1"
         '
-        'DyFlatButton9
+        'DyTextbox1
         '
-        Me.DyFlatButton9.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(11, Byte), Integer))
-        Me.DyFlatButton9.BackgroundImage = Nothing
-        Me.DyFlatButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.DyFlatButton9.ButtonImage = Global.wclDigalyTestenv.My.Resources.Resources.save_icon
-        Me.DyFlatButton9.ColorIcons = False
-        Me.DyFlatButton9.ColorIconsColor = System.Drawing.Color.White
-        Me.DyFlatButton9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DyFlatButton9.ForeColor = System.Drawing.Color.White
-        Me.DyFlatButton9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.DyFlatButton9.ImagePadding = New System.Windows.Forms.Padding(0)
-        Me.DyFlatButton9.Location = New System.Drawing.Point(561, 125)
-        Me.DyFlatButton9.Name = "DyFlatButton9"
-        Me.DyFlatButton9.ScaleIcons = True
-        Me.DyFlatButton9.Size = New System.Drawing.Size(189, 40)
-        Me.DyFlatButton9.TabIndex = 13
-        Me.DyFlatButton9.Text = "DyFlatButton9"
+        Me.DyTextbox1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(11, Byte), Integer))
+        Me.DyTextbox1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DyTextbox1.Location = New System.Drawing.Point(585, 205)
+        Me.DyTextbox1.Name = "DyTextbox1"
+        Me.DyTextbox1.Size = New System.Drawing.Size(163, 23)
+        Me.DyTextbox1.TabIndex = 18
         '
-        'DyFlatButton10
+        'DyTextbox2
         '
-        Me.DyFlatButton10.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(11, Byte), Integer))
-        Me.DyFlatButton10.BackgroundImage = Nothing
-        Me.DyFlatButton10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.DyFlatButton10.ButtonImage = Global.wclDigalyTestenv.My.Resources.Resources.save_icon
-        Me.DyFlatButton10.ColorIcons = False
-        Me.DyFlatButton10.ColorIconsColor = System.Drawing.Color.White
-        Me.DyFlatButton10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DyFlatButton10.ForeColor = System.Drawing.Color.White
-        Me.DyFlatButton10.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.DyFlatButton10.ImagePadding = New System.Windows.Forms.Padding(0)
-        Me.DyFlatButton10.Location = New System.Drawing.Point(516, 386)
-        Me.DyFlatButton10.Name = "DyFlatButton10"
-        Me.DyFlatButton10.ScaleIcons = True
-        Me.DyFlatButton10.Size = New System.Drawing.Size(39, 41)
-        Me.DyFlatButton10.TabIndex = 14
+        Me.DyTextbox2.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(11, Byte), Integer))
+        Me.DyTextbox2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DyTextbox2.Location = New System.Drawing.Point(585, 231)
+        Me.DyTextbox2.Margin = New System.Windows.Forms.Padding(0)
+        Me.DyTextbox2.Name = "DyTextbox2"
+        Me.DyTextbox2.Size = New System.Drawing.Size(163, 23)
+        Me.DyTextbox2.TabIndex = 19
         '
-        'DyFlatButton11
+        'DyTextboxBorder1
         '
-        Me.DyFlatButton11.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(11, Byte), Integer))
-        Me.DyFlatButton11.BackgroundImage = Nothing
-        Me.DyFlatButton11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.DyFlatButton11.ButtonImage = Global.wclDigalyTestenv.My.Resources.Resources.save_icon
-        Me.DyFlatButton11.ColorIcons = False
-        Me.DyFlatButton11.ColorIconsColor = System.Drawing.Color.White
-        Me.DyFlatButton11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DyFlatButton11.ForeColor = System.Drawing.Color.White
-        Me.DyFlatButton11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.DyFlatButton11.ImagePadding = New System.Windows.Forms.Padding(0)
-        Me.DyFlatButton11.Location = New System.Drawing.Point(-22, 332)
-        Me.DyFlatButton11.Name = "DyFlatButton11"
-        Me.DyFlatButton11.ScaleIcons = True
-        Me.DyFlatButton11.Size = New System.Drawing.Size(532, 129)
-        Me.DyFlatButton11.TabIndex = 15
-        Me.DyFlatButton11.Text = "Padding 0"
+        Me.DyTextboxBorder1.BackgroundImage = Nothing
+        Me.DyTextboxBorder1.BorderColorTextbox = System.Drawing.Color.CornflowerBlue
+        Me.DyTextboxBorder1.BorderWidth = 25
+        Me.DyTextboxBorder1.FontTextbox = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DyTextboxBorder1.ForeColorTextbox = System.Drawing.Color.Black
+        Me.DyTextboxBorder1.Location = New System.Drawing.Point(570, 38)
+        Me.DyTextboxBorder1.MultiLine = True
+        Me.DyTextboxBorder1.Name = "DyTextboxBorder1"
+        Me.DyTextboxBorder1.Size = New System.Drawing.Size(250, 57)
+        Me.DyTextboxBorder1.TabIndex = 20
         '
-        'DyFlatButton6
+        'DyTextboxBorder2
         '
-        Me.DyFlatButton6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(11, Byte), Integer))
-        Me.DyFlatButton6.BackgroundImage = Nothing
-        Me.DyFlatButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.DyFlatButton6.ButtonImage = Global.wclDigalyTestenv.My.Resources.Resources.save_icon
-        Me.DyFlatButton6.ColorIcons = True
-        Me.DyFlatButton6.ColorIconsColor = System.Drawing.Color.Red
-        Me.DyFlatButton6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DyFlatButton6.ForeColor = System.Drawing.Color.White
-        Me.DyFlatButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.DyFlatButton6.ImagePadding = New System.Windows.Forms.Padding(0)
-        Me.DyFlatButton6.Location = New System.Drawing.Point(552, 240)
-        Me.DyFlatButton6.Name = "DyFlatButton6"
-        Me.DyFlatButton6.ScaleIcons = True
-        Me.DyFlatButton6.Size = New System.Drawing.Size(265, 86)
-        Me.DyFlatButton6.TabIndex = 16
-        Me.DyFlatButton6.Text = "Padding 5"
+        Me.DyTextboxBorder2.BackgroundImage = Nothing
+        Me.DyTextboxBorder2.BorderColorTextbox = System.Drawing.Color.CornflowerBlue
+        Me.DyTextboxBorder2.BorderWidth = 5
+        Me.DyTextboxBorder2.FontTextbox = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DyTextboxBorder2.ForeColorTextbox = System.Drawing.Color.Black
+        Me.DyTextboxBorder2.Location = New System.Drawing.Point(617, 125)
+        Me.DyTextboxBorder2.MultiLine = False
+        Me.DyTextboxBorder2.Name = "DyTextboxBorder2"
+        Me.DyTextboxBorder2.Size = New System.Drawing.Size(131, 23)
+        Me.DyTextboxBorder2.TabIndex = 21
         '
-        'DyFlatButton12
+        'DyTextboxBorder3
         '
-        Me.DyFlatButton12.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(11, Byte), Integer))
-        Me.DyFlatButton12.BackgroundImage = Nothing
-        Me.DyFlatButton12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.DyFlatButton12.ButtonImage = Global.wclDigalyTestenv.My.Resources.Resources.nej
-        Me.DyFlatButton12.ColorIcons = False
-        Me.DyFlatButton12.ColorIconsColor = System.Drawing.Color.White
-        Me.DyFlatButton12.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DyFlatButton12.ForeColor = System.Drawing.Color.White
-        Me.DyFlatButton12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.DyFlatButton12.ImagePadding = New System.Windows.Forms.Padding(0)
-        Me.DyFlatButton12.Location = New System.Drawing.Point(609, 399)
-        Me.DyFlatButton12.Name = "DyFlatButton12"
-        Me.DyFlatButton12.ScaleIcons = True
-        Me.DyFlatButton12.Size = New System.Drawing.Size(251, 28)
-        Me.DyFlatButton12.TabIndex = 17
-        Me.DyFlatButton12.Text = "Padding 8"
+        Me.DyTextboxBorder3.BackgroundImage = Nothing
+        Me.DyTextboxBorder3.BorderColorTextbox = System.Drawing.Color.Red
+        Me.DyTextboxBorder3.BorderWidth = 5
+        Me.DyTextboxBorder3.FontTextbox = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DyTextboxBorder3.ForeColorTextbox = System.Drawing.Color.Blue
+        Me.DyTextboxBorder3.Location = New System.Drawing.Point(617, 154)
+        Me.DyTextboxBorder3.MultiLine = False
+        Me.DyTextboxBorder3.Name = "DyTextboxBorder3"
+        Me.DyTextboxBorder3.Size = New System.Drawing.Size(131, 23)
+        Me.DyTextboxBorder3.TabIndex = 22
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(885, 473)
-        Me.Controls.Add(Me.DyFlatButton12)
-        Me.Controls.Add(Me.DyFlatButton6)
-        Me.Controls.Add(Me.DyFlatButton11)
-        Me.Controls.Add(Me.DyFlatButton10)
-        Me.Controls.Add(Me.DyFlatButton9)
-        Me.Controls.Add(Me.DyFlatButton8)
-        Me.Controls.Add(Me.DyFlatButton7)
-        Me.Controls.Add(Me.DyFlatButton5)
+        Me.ClientSize = New System.Drawing.Size(885, 350)
+        Me.Controls.Add(Me.DyTextboxBorder3)
+        Me.Controls.Add(Me.DyTextboxBorder2)
+        Me.Controls.Add(Me.DyTextboxBorder1)
+        Me.Controls.Add(Me.DyTextbox2)
+        Me.Controls.Add(Me.DyTextbox1)
         Me.Controls.Add(Me.DyProgressBar1)
         Me.Controls.Add(Me.DyMarqueeBar1)
         Me.Controls.Add(Me.DyFlatButton4)
@@ -366,6 +268,7 @@ Partial Class Form1
         Me.Text = "wclDigaly Test"
         Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
@@ -378,12 +281,9 @@ Partial Class Form1
     Friend WithEvents DyFlatButton4 As wclDigaly.dyFlatButton
     Friend WithEvents DyMarqueeBar1 As wclDigaly.dyProgressBar
     Friend WithEvents DyProgressBar1 As wclDigaly.dyProgressBar
-    Friend WithEvents DyFlatButton5 As wclDigaly.dyFlatButton
-    Friend WithEvents DyFlatButton7 As wclDigaly.dyFlatButton
-    Friend WithEvents DyFlatButton9 As wclDigaly.dyFlatButton
-    Public WithEvents DyFlatButton8 As wclDigaly.dyFlatButton
-    Public WithEvents DyFlatButton10 As wclDigaly.dyFlatButton
-    Public WithEvents DyFlatButton11 As wclDigaly.dyFlatButton
-    Public WithEvents DyFlatButton6 As wclDigaly.dyFlatButton
-    Public WithEvents DyFlatButton12 As wclDigaly.dyFlatButton
+    Friend WithEvents DyTextbox1 As wclDigaly.dyTextbox
+    Friend WithEvents DyTextbox2 As wclDigaly.dyTextbox
+    Friend WithEvents DyTextboxBorder1 As wclDigaly.dyTextboxBorder
+    Friend WithEvents DyTextboxBorder2 As wclDigaly.dyTextboxBorder
+    Friend WithEvents DyTextboxBorder3 As wclDigaly.dyTextboxBorder
 End Class
