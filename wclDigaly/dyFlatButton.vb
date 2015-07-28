@@ -1,13 +1,23 @@
 ﻿Imports System.ComponentModel
 
 Public Class dyFlatButton
-    Dim bmpButtonImage As Bitmap
-    Dim bytState As Byte = 0
-    Dim blnScaleIcons As Boolean = True
-    Dim alImageAlign As ContentAlignment = ContentAlignment.MiddleLeft
-    Dim pdePadding As Padding = Padding.Empty
-    Dim blnColorIcons As Boolean = False
-    Dim colIconColor As Color = Color.White
+    Private bmpButtonImage As Bitmap
+    Private bytState As Byte = 0
+    Private blnScaleIcons As Boolean = True
+    Private alImageAlign As ContentAlignment = ContentAlignment.MiddleLeft
+    Private colIconColor As Color = Color.White
+    Private intBorderWidth As Integer = 4
+    Private blnInverted As Boolean = False
+
+    Public Property Inverted As Boolean
+        Get
+            Return blnInverted
+        End Get
+        Set(value As Boolean)
+            blnInverted = value
+            Invalidate()
+        End Set
+    End Property
 
     Public Property ButtonImage As Bitmap
         Get
@@ -29,26 +39,6 @@ Public Class dyFlatButton
         End Set
     End Property
 
-    Public Property ColorIcons As Boolean
-        Get
-            Return blnColorIcons
-        End Get
-        Set(value As Boolean)
-            blnColorIcons = value
-            Invalidate()
-        End Set
-    End Property
-
-    Public Property ColorIconsColor As Color
-        Get
-            Return colIconColor
-        End Get
-        Set(value As Color)
-            colIconColor = value
-            Invalidate()
-        End Set
-    End Property
-
     Public Property ImageAlign As ContentAlignment
         Get
             Return alImageAlign
@@ -63,6 +53,28 @@ Public Class dyFlatButton
         End Set
     End Property
 
+    Public Property BorderWidth As Integer
+        Get
+            Return intBorderWidth
+        End Get
+        Set(value As Integer)
+            intBorderWidth = value
+            Invalidate()
+        End Set
+    End Property
+
+    <Browsable(True), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)>
+    Public Overloads Property Padding As Padding
+        Get
+            Return MyBase.Padding
+        End Get
+        Set(value As Padding)
+            MyBase.Padding = value
+            Invalidate()
+        End Set
+    End Property
+
+    'BackgroundImage not used, hidden
     <Browsable(False)>
     Public Overloads Property BackgroundImage As Bitmap
         Get
@@ -73,16 +85,7 @@ Public Class dyFlatButton
         End Set
     End Property
 
-    <Browsable(False)>
-    Public Overloads Property Padding As Padding
-        Get
-            Return Nothing
-        End Get
-        Set(value As Padding)
-
-        End Set
-    End Property
-
+    'BackgroundImageLayout not used, hidden
     <Browsable(False)>
     Public Overloads Property BackgroundImageLayout As ImageLayout
         Get
@@ -90,17 +93,6 @@ Public Class dyFlatButton
         End Get
         Set(value As ImageLayout)
 
-        End Set
-    End Property
-
-
-    Public Property ImagePadding As Padding
-        Get
-            Return pdePadding
-        End Get
-        Set(value As Padding)
-            pdePadding = value
-            Invalidate()
         End Set
     End Property
 
@@ -116,17 +108,33 @@ Public Class dyFlatButton
 
         e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.AntiAlias
 
-        e.Graphics.FillRectangle(New SolidBrush(BackColor), 0, 0, Width, Height)
-
-        If bytState = 1 Then
-            e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(50, 0, 0, 0)), 0, 0, Width, Height)
-        ElseIf bytState = 2 Then
-            e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(100, 0, 0, 0)), 0, 0, Width, Height)
+        If blnInverted Then
+            e.Graphics.FillRectangle(New SolidBrush(Color.White), 0, 0, Width, Height)
+            If bytState = 1 Then
+                e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(15, 0, 0, 0)), 0, 0, Width, Height)
+            ElseIf bytState = 2 Then
+                e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(25, 0, 0, 0)), 0, 0, Width, Height)
+            End If
+            For i As Integer = 0 To intBorderWidth - 1
+                e.Graphics.DrawRectangle(New Pen(BackColor), i, i, Width - 1 - i * 2, Height - 1 - i * 2)
+            Next
+        Else
+            e.Graphics.FillRectangle(New SolidBrush(BackColor), 0, 0, Width, Height)
         End If
 
-        If Focused Then
-            For i As Integer = 0 To 3
-                e.Graphics.DrawRectangle(New Pen(Color.FromArgb(128, 255, 255, 255)), 0 + i, 0 + i, Width - i * 2, Height - i * 2)
+        'Hover effect
+        If Not blnInverted Then
+            If bytState = 1 Then
+                e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(50, 0, 0, 0)), 0, 0, Width, Height)
+            ElseIf bytState = 2 Then
+                e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(100, 0, 0, 0)), 0, 0, Width, Height)
+            End If
+        End If
+
+
+        If Focused And Not blnInverted Then
+            For i As Integer = 0 To intBorderWidth - 1
+                e.Graphics.DrawRectangle(New Pen(Color.FromArgb(128, 255, 255, 255)), i, i, Width - 1 - i * 2, Height - 1 - i * 2)
             Next
         End If
 
@@ -139,19 +147,19 @@ Public Class dyFlatButton
                 e.Graphics.InterpolationMode = Drawing2D.InterpolationMode.Bicubic
 
                 If alImageAlign = ContentAlignment.MiddleLeft Then
-                    e.Graphics.DrawImage(bmpButtonImage, pdePadding.Left, pdePadding.Top, intWidth - pdePadding.Right * 2, intHeight - pdePadding.Bottom * 2)
+                    e.Graphics.DrawImage(bmpButtonImage, Padding.Left, Padding.Top, intWidth - Padding.Right * 2, intHeight - Padding.Bottom * 2)
                 ElseIf alImageAlign = ContentAlignment.MiddleCenter
-                    e.Graphics.DrawImage(bmpButtonImage, CInt(Width / 2 - intWidth / 2) + pdePadding.Left, CInt(Height / 2 - intHeight / 2) + pdePadding.Top, intWidth - pdePadding.Right * 2, intHeight - pdePadding.Bottom * 2)
+                    e.Graphics.DrawImage(bmpButtonImage, CInt(Width / 2 - intWidth / 2) + Padding.Left, CInt(Height / 2 - intHeight / 2) + Padding.Top, intWidth - Padding.Right * 2, intHeight - Padding.Bottom * 2)
                 ElseIf alImageAlign = ContentAlignment.MiddleRight
-                    e.Graphics.DrawImage(bmpButtonImage, Width - intWidth + pdePadding.Left * 2 - pdePadding.Right, pdePadding.Top, intWidth - pdePadding.Right * 2, intHeight - pdePadding.Bottom * 2)
+                    e.Graphics.DrawImage(bmpButtonImage, Width - intWidth + Padding.Left * 2 - Padding.Right, Padding.Top, intWidth - Padding.Right * 2, intHeight - Padding.Bottom * 2)
                 End If
             Else
                 If alImageAlign = ContentAlignment.MiddleLeft Then
-                    e.Graphics.DrawImage(bmpButtonImage, pdePadding.Left, CInt(Height / 2 - bmpButtonImage.Height / 2), bmpButtonImage.Width, bmpButtonImage.Height)
+                    e.Graphics.DrawImage(bmpButtonImage, Padding.Left, CInt(Height / 2 - bmpButtonImage.Height / 2), bmpButtonImage.Width, bmpButtonImage.Height)
                 ElseIf alImageAlign = ContentAlignment.MiddleCenter
-                    e.Graphics.DrawImage(bmpButtonImage, CInt(Width / 2 - bmpButtonImage.Width / 2) + pdePadding.Left, CInt(Height / 2 - bmpButtonImage.Height / 2) + pdePadding.Top, bmpButtonImage.Width, bmpButtonImage.Height)
+                    e.Graphics.DrawImage(bmpButtonImage, CInt(Width / 2 - bmpButtonImage.Width / 2) + Padding.Left, CInt(Height / 2 - bmpButtonImage.Height / 2) + Padding.Top, bmpButtonImage.Width, bmpButtonImage.Height)
                 ElseIf alImageAlign = ContentAlignment.MiddleRight
-                    e.Graphics.DrawImage(bmpButtonImage, Width - bmpButtonImage.Width - pdePadding.Right, CInt(Height / 2 - bmpButtonImage.Height / 2), bmpButtonImage.Width, bmpButtonImage.Height)
+                    e.Graphics.DrawImage(bmpButtonImage, Width - bmpButtonImage.Width - Padding.Right, CInt(Height / 2 - bmpButtonImage.Height / 2), bmpButtonImage.Width, bmpButtonImage.Height)
                 End If
             End If
 

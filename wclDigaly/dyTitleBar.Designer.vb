@@ -1,6 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class dySlider
-    Inherits System.Windows.Forms.Control
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class dyTitleBar
+    Inherits Panel
 
     'Control overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _

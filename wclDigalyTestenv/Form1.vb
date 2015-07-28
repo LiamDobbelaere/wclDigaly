@@ -24,9 +24,7 @@ Public Class Form1
     End Sub
 
     Private Sub DySlider1_ValueChanged()
-        DyGrid1.GridSize = DySlider1.Value
-        DyTest1.Value = DySlider1.Value
-        DyMarqueeBar1.Value = DySlider1.Value
+
     End Sub
 
     Private Sub DyFlatButton3_Click(sender As Object, e As EventArgs)

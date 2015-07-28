@@ -106,6 +106,18 @@
     <Compile Include="dyTextboxBorder.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="dyTitleBar.Designer.vb">
+      <DependentUpon>dyTitleBar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dyTitleBar.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dyTitlebarButton.Designer.vb">
+      <DependentUpon>dyTitlebarButton.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dyTitlebarButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="dyWin7Progress.Designer.vb">
       <DependentUpon>dyWin7Progress.vb</DependentUpon>
     </Compile>
@@ -152,6 +164,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="res\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

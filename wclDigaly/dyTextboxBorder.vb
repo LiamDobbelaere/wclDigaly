@@ -104,6 +104,7 @@ Public Class dyTextboxBorder
         End Get
         Set(value As String)
             DyTextbox1.Text = value
+            Invalidate()
         End Set
     End Property
 

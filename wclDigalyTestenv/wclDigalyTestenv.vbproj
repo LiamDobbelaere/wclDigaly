@@ -119,12 +119,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\wclDigaly\wclDigaly.vbproj">
-      <Project>{36759987-2C0C-478E-BC06-C654CADDE67F}</Project>
-      <Name>wclDigaly</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\sugoi.png" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +132,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nej.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\wclDigaly\wclDigaly.vbproj">
+      <Project>{36759987-2C0C-478E-BC06-C654CADDE67F}</Project>
+      <Name>wclDigaly</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
