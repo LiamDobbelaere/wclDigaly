@@ -5,7 +5,6 @@ Public Class dyFlatButton
     Private bytState As Byte = 0
     Private blnScaleIcons As Boolean = True
     Private alImageAlign As ContentAlignment = ContentAlignment.MiddleLeft
-    Private colIconColor As Color = Color.White
     Private intBorderWidth As Integer = 4
     Private blnInverted As Boolean = False
 
@@ -95,6 +94,27 @@ Public Class dyFlatButton
 
         End Set
     End Property
+
+    <Browsable(False)>
+    Public Property ColorIcons As Boolean
+        Get
+            Return Nothing
+        End Get
+        Set(value As Boolean)
+
+        End Set
+    End Property
+
+    <Browsable(False)>
+    Public Property ColorIconsColor As Color
+        Get
+            Return Nothing
+        End Get
+        Set(value As Color)
+
+        End Set
+    End Property
+
 
     Public Sub New()
         InitializeComponent()
