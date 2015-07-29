@@ -47,9 +47,12 @@ Partial Class Form1
         Me.DyFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.DyFlatButton1.BorderWidth = 4
         Me.DyFlatButton1.ButtonImage = Nothing
+        Me.DyFlatButton1.ColorIcons = False
+        Me.DyFlatButton1.ColorIconsColor = System.Drawing.Color.Empty
         Me.DyFlatButton1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DyFlatButton1.ForeColor = System.Drawing.Color.White
         Me.DyFlatButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.DyFlatButton1.ImagePadding = Nothing
         Me.DyFlatButton1.Inverted = False
         Me.DyFlatButton1.Location = New System.Drawing.Point(12, 36)
         Me.DyFlatButton1.Name = "DyFlatButton1"
@@ -65,9 +68,12 @@ Partial Class Form1
         Me.DyFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.DyFlatButton2.BorderWidth = 4
         Me.DyFlatButton2.ButtonImage = Nothing
+        Me.DyFlatButton2.ColorIcons = False
+        Me.DyFlatButton2.ColorIconsColor = System.Drawing.Color.Empty
         Me.DyFlatButton2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DyFlatButton2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.DyFlatButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.DyFlatButton2.ImagePadding = Nothing
         Me.DyFlatButton2.Inverted = True
         Me.DyFlatButton2.Location = New System.Drawing.Point(12, 76)
         Me.DyFlatButton2.Name = "DyFlatButton2"
@@ -87,6 +93,7 @@ Partial Class Form1
         Me.Controls.Add(Me.DyTitleBar1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(1920, 1040)
         Me.Name = "Form1"
         Me.Text = "wclDigaly Test"
         Me.ResumeLayout(False)

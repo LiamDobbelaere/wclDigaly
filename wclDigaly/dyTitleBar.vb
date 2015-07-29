@@ -1,4 +1,5 @@
 ﻿Imports System.ComponentModel
+Imports System.Runtime.InteropServices
 
 Public Class dyTitleBar
     Private previousClick As Integer = SystemInformation.DoubleClickTime
@@ -77,6 +78,11 @@ Public Class dyTitleBar
         End If
     End Sub
 
+    Protected Overrides Sub OnInvalidated(e As InvalidateEventArgs)
+        MyBase.OnInvalidated(e)
+        Me.FindForm().MaximumSize = Screen.PrimaryScreen.WorkingArea.Size
+    End Sub
+
     Protected Overrides Sub OnPaint(ByVal e As System.Windows.Forms.PaintEventArgs)
         MyBase.OnPaint(e)
 
@@ -87,11 +93,13 @@ Public Class dyTitleBar
         e.Graphics.TextRenderingHint = Drawing.Text.TextRenderingHint.ClearTypeGridFit
         If useLightTheme Then
             e.Graphics.FillRectangle(Brushes.White, e.ClipRectangle)
-            e.Graphics.DrawString(Me.FindForm().Text, Font, Brushes.Black, New RectangleF(e.ClipRectangle.X + 5, e.ClipRectangle.Y, e.ClipRectangle.Width, e.ClipRectangle.Height), sf)
+            e.Graphics.DrawString(Me.FindForm().Text, Font, Brushes.Black, New RectangleF(e.ClipRectangle.X + 25, e.ClipRectangle.Y, e.ClipRectangle.Width, e.ClipRectangle.Height), sf)
         Else
             e.Graphics.FillRectangle(New SolidBrush(BackColor), e.ClipRectangle)
-            e.Graphics.DrawString(Me.FindForm().Text, Font, Brushes.White, New RectangleF(e.ClipRectangle.X + 5, e.ClipRectangle.Y, e.ClipRectangle.Width, e.ClipRectangle.Height), sf)
+            e.Graphics.DrawString(Me.FindForm().Text, Font, Brushes.White, New RectangleF(e.ClipRectangle.X + 25, e.ClipRectangle.Y, e.ClipRectangle.Width, e.ClipRectangle.Height), sf)
         End If
+
+        e.Graphics.DrawIcon(Me.FindForm().Icon, New Rectangle(7, 7, 16, 16))
 
         'Add your custom paint code here
     End Sub

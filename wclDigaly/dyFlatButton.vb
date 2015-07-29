@@ -95,6 +95,7 @@ Public Class dyFlatButton
         End Set
     End Property
 
+    'Unused but don't remove
     <Browsable(False)>
     Public Property ColorIcons As Boolean
         Get
@@ -105,12 +106,24 @@ Public Class dyFlatButton
         End Set
     End Property
 
+    'Unused but don't remove
     <Browsable(False)>
     Public Property ColorIconsColor As Color
         Get
             Return Nothing
         End Get
         Set(value As Color)
+
+        End Set
+    End Property
+
+    'Unused but don't remove
+    <Browsable(False)>
+    Public Property ImagePadding
+        Get
+            Return Nothing
+        End Get
+        Set(value)
 
         End Set
     End Property

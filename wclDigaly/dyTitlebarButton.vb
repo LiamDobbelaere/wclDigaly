@@ -40,7 +40,7 @@ Public Class dyTitlebarButton
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        Me.Width = 30
+        Me.Width = 45
         Me.Height = 30
     End Sub
 
@@ -57,13 +57,13 @@ Public Class dyTitlebarButton
                         p = New Pen(Color.White, 1)
                     End If
                 Else
-                    p = New Pen(Color.White, 2)
+                    p = New Pen(Color.White, 1)
                 End If
             Else
                 If bmButtonType = ButtonMode.Maximize Or bmButtonType = ButtonMode.Minimize Then
                     p = New Pen(Color.FromArgb(204, 204, 204), 1)
                 Else
-                    p = New Pen(Color.FromArgb(204, 204, 204), 2)
+                    p = New Pen(Color.FromArgb(204, 204, 204), 1)
                 End If
             End If
         Else
@@ -75,13 +75,13 @@ Public Class dyTitlebarButton
                         p = New Pen(Color.White, 1)
                     End If
                 Else
-                    p = New Pen(Color.White, 2)
+                    p = New Pen(Color.White, 1)
                 End If
             Else
                 If bmButtonType = ButtonMode.Maximize Or bmButtonType = ButtonMode.Minimize Then
                     p = New Pen(Color.White, 1)
                 Else
-                    p = New Pen(Color.White, 2)
+                    p = New Pen(Color.White, 1)
                 End If
             End If
         End If
@@ -117,15 +117,15 @@ Public Class dyTitlebarButton
 
 
         If bmButtonType = ButtonMode.Cross Then
-            e.Graphics.DrawLine(p, ins, ins, Width - ins, Height - ins)
-            e.Graphics.DrawLine(p, Width - ins, ins, ins, Height - ins)
+            e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.AntiAlias
+            e.Graphics.DrawLine(p, 17, 9, 26, 18)
+            e.Graphics.DrawLine(p, 17, 18, 26, 9)
         ElseIf bmButtonType = ButtonMode.Maximize
-            e.Graphics.DrawRectangle(p, ins, ins, ins, ins)
-            e.Graphics.FillRectangle(New SolidBrush(p.Color), ins, ins, ins, 3)
+            e.Graphics.DrawRectangle(p, 17, 9, 9, 9)
+            'e.Graphics.FillRectangle(New SolidBrush(p.Color), ins, ins, ins, 3)
         ElseIf bmButtonType = ButtonMode.Minimize
-            e.Graphics.DrawRectangle(p, ins, Height - ins - 1, ins, 1)
+            e.Graphics.DrawLine(p, 18, 14, 27, 14)
         End If
-        'Add your custom paint code here
     End Sub
 
     Protected Overrides Sub OnMouseClick(e As MouseEventArgs)
