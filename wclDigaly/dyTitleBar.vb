@@ -5,6 +5,9 @@ Public Class dyTitleBar
     Private previousClick As Integer = SystemInformation.DoubleClickTime
     Public Shadows Event DoubleClick As EventHandler
     Private useLightTheme As Boolean = True
+    Private blnMaxButton As Boolean = True
+    Private blnMinButton As Boolean = True
+
 
     Dim minbutton As New dyTitlebarButton()
     Dim maxbutton As New dyTitlebarButton()
@@ -43,6 +46,28 @@ Public Class dyTitleBar
         End Set
     End Property
 
+    Public Property MaximizeButton As Boolean
+        Get
+            Return blnMaxButton
+        End Get
+        Set(value As Boolean)
+            blnMaxButton = value
+            UpdateButtons()
+            Invalidate()
+        End Set
+    End Property
+
+    Public Property MinimizeButton As Boolean
+        Get
+            Return blnMinButton
+        End Get
+        Set(value As Boolean)
+            blnMinButton = value
+            UpdateButtons()
+            Invalidate()
+        End Set
+    End Property
+
     Public Sub New()
         InitializeComponent()
 
@@ -64,6 +89,18 @@ Public Class dyTitleBar
     End Sub
 
     Sub UpdateButtons()
+        Me.Controls.Remove(minbutton)
+        Me.Controls.Remove(maxbutton)
+        Me.components.Remove(xbutton)
+
+        If blnMinButton Then
+            Me.Controls.Add(minbutton)
+        End If
+        If blnMaxButton Then
+            Me.Controls.Add(maxbutton)
+        End If
+        Me.Controls.Add(xbutton)
+
         If Not useLightTheme Then
             minbutton.LightTheme = False
             minbutton.BackColor = BackColor

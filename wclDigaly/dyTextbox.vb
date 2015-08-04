@@ -52,7 +52,6 @@ Public Class dyTextbox
     End Property
 
     Protected Overrides Sub WndProc(ByRef m As Message)
-        MyBase.WndProc(m)
 
         If m.Msg = WM_NCPAINT Then
             Dim hDC As IntPtr = GetWindowDC(m.HWnd)
@@ -66,6 +65,8 @@ Public Class dyTextbox
             End Using
             ReleaseDC(m.HWnd, hDC)
         End If
+
+        MyBase.WndProc(m)
 
     End Sub
 

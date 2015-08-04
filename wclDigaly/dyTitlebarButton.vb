@@ -109,15 +109,23 @@ Public Class dyTitlebarButton
         Else
             e.Graphics.FillRectangle(New SolidBrush(BackColor), e.Graphics.ClipBounds)
             If State = 1 Then
-                e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(50, 0, 0, 0)), e.Graphics.ClipBounds)
+                If bmButtonType = ButtonMode.Cross Then
+                    e.Graphics.FillRectangle(New SolidBrush(HoverColor), e.Graphics.ClipBounds)
+                Else
+                    e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(50, 0, 0, 0)), e.Graphics.ClipBounds)
+                End If
             ElseIf State = 2 Then
-                e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(100, 0, 0, 0)), e.Graphics.ClipBounds)
+                If bmButtonType = ButtonMode.Cross Then
+                    e.Graphics.FillRectangle(New SolidBrush(ClickColor), e.Graphics.ClipBounds)
+                Else
+                    e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(100, 0, 0, 0)), e.Graphics.ClipBounds)
+                End If
             End If
         End If
 
 
         If bmButtonType = ButtonMode.Cross Then
-            e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.AntiAlias
+            'e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.AntiAlias
             e.Graphics.DrawLine(p, 17, 9, 26, 18)
             e.Graphics.DrawLine(p, 17, 18, 26, 9)
         ElseIf bmButtonType = ButtonMode.Maximize

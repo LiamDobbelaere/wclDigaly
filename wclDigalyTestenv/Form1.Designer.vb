@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
-    Inherits System.Windows.Forms.Form
+    Inherits Form
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -23,22 +23,10 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.DyTitleBar1 = New wclDigaly.dyTitleBar()
         Me.DyFlatButton1 = New wclDigaly.dyFlatButton()
         Me.DyFlatButton2 = New wclDigaly.dyFlatButton()
+        Me.DyTitleBar1 = New wclDigaly.dyTitleBar()
         Me.SuspendLayout()
-        '
-        'DyTitleBar1
-        '
-        Me.DyTitleBar1.BackColor = System.Drawing.Color.Green
-        Me.DyTitleBar1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.DyTitleBar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DyTitleBar1.LightTheme = False
-        Me.DyTitleBar1.Location = New System.Drawing.Point(0, 0)
-        Me.DyTitleBar1.Name = "DyTitleBar1"
-        Me.DyTitleBar1.Size = New System.Drawing.Size(370, 30)
-        Me.DyTitleBar1.TabIndex = 0
-        Me.DyTitleBar1.Text = "Test"
         '
         'DyFlatButton1
         '
@@ -82,15 +70,28 @@ Partial Class Form1
         Me.DyFlatButton2.TabIndex = 2
         Me.DyFlatButton2.Text = "DyFlatButton2"
         '
+        'DyTitleBar1
+        '
+        Me.DyTitleBar1.BackColor = System.Drawing.Color.Green
+        Me.DyTitleBar1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.DyTitleBar1.LightTheme = False
+        Me.DyTitleBar1.Location = New System.Drawing.Point(0, 0)
+        Me.DyTitleBar1.MaximizeButton = True
+        Me.DyTitleBar1.MinimizeButton = True
+        Me.DyTitleBar1.Name = "DyTitleBar1"
+        Me.DyTitleBar1.Size = New System.Drawing.Size(434, 30)
+        Me.DyTitleBar1.TabIndex = 3
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(370, 273)
+        Me.ClientSize = New System.Drawing.Size(434, 337)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.DyTitleBar1)
         Me.Controls.Add(Me.DyFlatButton2)
         Me.Controls.Add(Me.DyFlatButton1)
-        Me.Controls.Add(Me.DyTitleBar1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximumSize = New System.Drawing.Size(1920, 1040)
@@ -99,8 +100,7 @@ Partial Class Form1
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents DyTitleBar1 As wclDigaly.dyTitleBar
     Friend WithEvents DyFlatButton1 As wclDigaly.dyFlatButton
     Friend WithEvents DyFlatButton2 As wclDigaly.dyFlatButton
+    Friend WithEvents DyTitleBar1 As wclDigaly.dyTitleBar
 End Class
