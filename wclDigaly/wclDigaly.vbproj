@@ -70,6 +70,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColorConversion.vb" />
+    <Compile Include="dyColorPicker.Designer.vb">
+      <DependentUpon>dyColorPicker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dyColorPicker.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="dyFlatButton.Designer.vb">
       <DependentUpon>dyFlatButton.vb</DependentUpon>
     </Compile>

@@ -38,4 +38,14 @@ Public Class Form1
     Private Sub DyTextboxBorder1_Load(sender As Object, e As EventArgs) 
 
     End Sub
+
+    Private Sub DyColorPicker1_SelectedColorChanged() Handles DyColorPicker1.SelectedColorChanged
+        DyFlatButton1.BackColor = DyColorPicker1.SelectedColor
+        DyFlatButton2.ForeColor = DyColorPicker1.SelectedColor
+        DyFlatButton2.BackColor = DyColorPicker1.SelectedColor
+
+        DyTitleBar1.BackColor = DyColorPicker1.SelectedColor
+
+
+    End Sub
 End Class

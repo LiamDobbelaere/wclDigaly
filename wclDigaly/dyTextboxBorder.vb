@@ -6,6 +6,7 @@ Public Class dyTextboxBorder
     Dim colTextBorder As Color = Color.CornflowerBlue
     Dim blnMultiline As Boolean = False
     Dim intBorderWidth As Integer = 5
+    Dim strPasswordChar As String = String.Empty
 
     <Browsable(False)>
     Public Overloads Property BackgroundImage As Bitmap
@@ -97,6 +98,24 @@ Public Class dyTextboxBorder
         End Set
     End Property
 
+    Public Property Password As Boolean
+        Get
+            If strPasswordChar = String.Empty Then
+                Return False
+            Else
+                Return True
+            End If
+        End Get
+        Set(value As Boolean)
+            If value Then
+                strPasswordChar = "*"
+            Else
+                strPasswordChar = String.Empty
+            End If
+            Invalidate()
+        End Set
+    End Property
+
     <Browsable(True), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)>
     Public Overrides Property Text As String
         Get
@@ -127,6 +146,7 @@ Public Class dyTextboxBorder
         DyTextbox1.Font = fntTextbox
         DyTextbox1.ForeColor = colTextFore
         DyTextbox1.BorderColor = colTextBorder
+        DyTextbox1.PasswordChar = strPasswordChar
 
         If blnMultiline Then
             DyTextbox1.Dock = DockStyle.Fill

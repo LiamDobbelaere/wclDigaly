@@ -7,7 +7,9 @@ Public Class dyTitleBar
     Private useLightTheme As Boolean = True
     Private blnMaxButton As Boolean = True
     Private blnMinButton As Boolean = True
-
+    Private blnShowIcon As Boolean = True
+    Private blnCustomIcon As Boolean = False
+    Private bmpCustomIcon As Bitmap = New Bitmap(16, 16)
 
     Dim minbutton As New dyTitlebarButton()
     Dim maxbutton As New dyTitlebarButton()
@@ -64,6 +66,47 @@ Public Class dyTitleBar
         Set(value As Boolean)
             blnMinButton = value
             UpdateButtons()
+            Invalidate()
+        End Set
+    End Property
+
+    Public Overrides Property BackColor As Color
+        Get
+            Return MyBase.BackColor
+        End Get
+        Set(value As Color)
+            MyBase.BackColor = value
+            UpdateButtons()
+            Invalidate()
+        End Set
+    End Property
+
+    Public Property ShowIcon As Boolean
+        Get
+            Return blnShowIcon
+        End Get
+        Set(value As Boolean)
+            blnShowIcon = value
+            Invalidate()
+        End Set
+    End Property
+
+    Public Property UseCustomIcon As Boolean
+        Get
+            Return blnCustomIcon
+        End Get
+        Set(value As Boolean)
+            blnCustomIcon = value
+            Invalidate()
+        End Set
+    End Property
+
+    Public Property Image As Bitmap
+        Get
+            Return bmpCustomIcon
+        End Get
+        Set(value As Bitmap)
+            bmpCustomIcon = value
             Invalidate()
         End Set
     End Property
@@ -130,13 +173,27 @@ Public Class dyTitleBar
         e.Graphics.TextRenderingHint = Drawing.Text.TextRenderingHint.ClearTypeGridFit
         If useLightTheme Then
             e.Graphics.FillRectangle(Brushes.White, e.ClipRectangle)
-            e.Graphics.DrawString(Me.FindForm().Text, Font, Brushes.Black, New RectangleF(e.ClipRectangle.X + 25, e.ClipRectangle.Y, e.ClipRectangle.Width, e.ClipRectangle.Height), sf)
+            If blnShowIcon Then
+                e.Graphics.DrawString(Me.FindForm().Text, Font, Brushes.Black, New RectangleF(e.ClipRectangle.X + 25, e.ClipRectangle.Y, e.ClipRectangle.Width, e.ClipRectangle.Height), sf)
+            Else
+                e.Graphics.DrawString(Me.FindForm().Text, Font, Brushes.Black, New RectangleF(e.ClipRectangle.X + 5, e.ClipRectangle.Y, e.ClipRectangle.Width, e.ClipRectangle.Height), sf)
+            End If
         Else
             e.Graphics.FillRectangle(New SolidBrush(BackColor), e.ClipRectangle)
-            e.Graphics.DrawString(Me.FindForm().Text, Font, Brushes.White, New RectangleF(e.ClipRectangle.X + 25, e.ClipRectangle.Y, e.ClipRectangle.Width, e.ClipRectangle.Height), sf)
+            If blnShowIcon Then
+                e.Graphics.DrawString(Me.FindForm().Text, Font, Brushes.White, New RectangleF(e.ClipRectangle.X + 25, e.ClipRectangle.Y, e.ClipRectangle.Width, e.ClipRectangle.Height), sf)
+            Else
+                e.Graphics.DrawString(Me.FindForm().Text, Font, Brushes.White, New RectangleF(e.ClipRectangle.X + 5, e.ClipRectangle.Y, e.ClipRectangle.Width, e.ClipRectangle.Height), sf)
+            End If
         End If
 
-        e.Graphics.DrawIcon(Me.FindForm().Icon, New Rectangle(7, 7, 16, 16))
+        If blnShowIcon Then
+            If blnCustomIcon And bmpCustomIcon IsNot Nothing Then
+                e.Graphics.DrawImage(bmpCustomIcon, New Rectangle(7, 7, 16, 16))
+            Else
+                e.Graphics.DrawIcon(Me.FindForm().Icon, New Rectangle(7, 7, 16, 16))
+            End If
+        End If
 
         'Add your custom paint code here
     End Sub
