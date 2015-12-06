@@ -139,7 +139,7 @@ Public Class dyFlatButton
     Protected Overrides Sub OnPaint(ByVal e As PaintEventArgs)
         MyBase.DoubleBuffered = True
 
-        e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.AntiAlias
+        e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.None
 
         If blnInverted Then
             e.Graphics.FillRectangle(New SolidBrush(Color.White), 0, 0, Width, Height)
@@ -163,7 +163,6 @@ Public Class dyFlatButton
                 e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(100, 0, 0, 0)), 0, 0, Width, Height)
             End If
         End If
-
 
         If Focused And Not blnInverted Then
             For i As Integer = 0 To intBorderWidth - 1
