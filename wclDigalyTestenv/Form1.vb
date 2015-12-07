@@ -40,12 +40,14 @@ Public Class Form1
     End Sub
 
     Private Sub DyColorPicker1_SelectedColorChanged() Handles DyColorPicker1.SelectedColorChanged
-        DyFlatButton1.BackColor = DyColorPicker1.SelectedColor
-        DyFlatButton2.ForeColor = DyColorPicker1.SelectedColor
-        DyFlatButton2.BackColor = DyColorPicker1.SelectedColor
+        Dim c As Color = DyColorPicker1.SelectedColor
 
-        DyTitleBar1.BackColor = DyColorPicker1.SelectedColor
+        DyFlatButton1.BackColor = c
+        DyFlatButton2.ForeColor = c
+        DyFlatButton2.BackColor = c
 
+        DyTitleBar1.BackColor = c
+        DyCheckbox1.ForeColor = c
 
     End Sub
 End Class

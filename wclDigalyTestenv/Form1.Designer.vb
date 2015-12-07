@@ -30,7 +30,7 @@ Partial Class Form1
         Me.DyColorPicker2 = New wclDigaly.dyColorPicker()
         Me.DyTextboxBorder1 = New wclDigaly.dyTextboxBorder()
         Me.DyTextboxBorder2 = New wclDigaly.dyTextboxBorder()
-        Me.DyFlatButton3 = New wclDigaly.dyFlatButton()
+        Me.DyCheckbox1 = New wclDigaly.dyCheckbox()
         Me.SuspendLayout()
         '
         'DyFlatButton1
@@ -95,11 +95,11 @@ Partial Class Form1
         Me.DyColorPicker1.BackColor = System.Drawing.Color.White
         Me.DyColorPicker1.BlockSize = 32
         Me.DyColorPicker1.Brightness = 100
-        Me.DyColorPicker1.Location = New System.Drawing.Point(31, 138)
+        Me.DyColorPicker1.Location = New System.Drawing.Point(31, 129)
         Me.DyColorPicker1.Name = "DyColorPicker1"
         Me.DyColorPicker1.Saturation = 255
         Me.DyColorPicker1.SelectedColor = System.Drawing.Color.Black
-        Me.DyColorPicker1.Size = New System.Drawing.Size(493, 81)
+        Me.DyColorPicker1.Size = New System.Drawing.Size(483, 112)
         Me.DyColorPicker1.Spacing = 5
         Me.DyColorPicker1.TabIndex = 4
         Me.DyColorPicker1.Text = "DyColorPicker1"
@@ -147,34 +147,26 @@ Partial Class Form1
         Me.DyTextboxBorder2.TabIndex = 28
         Me.DyTextboxBorder2.Text = "DyTextboxBorder2"
         '
-        'DyFlatButton3
+        'DyCheckbox1
         '
-        Me.DyFlatButton3.BackColor = System.Drawing.Color.Yellow
-        Me.DyFlatButton3.BackgroundImage = Nothing
-        Me.DyFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.DyFlatButton3.BorderWidth = 4
-        Me.DyFlatButton3.ButtonImage = Nothing
-        Me.DyFlatButton3.ColorIcons = False
-        Me.DyFlatButton3.ColorIconsColor = System.Drawing.Color.Empty
-        Me.DyFlatButton3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DyFlatButton3.ForeColor = System.Drawing.Color.White
-        Me.DyFlatButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.DyFlatButton3.ImagePadding = Nothing
-        Me.DyFlatButton3.Inverted = False
-        Me.DyFlatButton3.Location = New System.Drawing.Point(160, 76)
-        Me.DyFlatButton3.Name = "DyFlatButton3"
-        Me.DyFlatButton3.ScaleIcons = True
-        Me.DyFlatButton3.Size = New System.Drawing.Size(16, 18)
-        Me.DyFlatButton3.TabIndex = 29
+        Me.DyCheckbox1.AutoSize = True
+        Me.DyCheckbox1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DyCheckbox1.ForeColor = System.Drawing.Color.Blue
+        Me.DyCheckbox1.Location = New System.Drawing.Point(428, 89)
+        Me.DyCheckbox1.Name = "DyCheckbox1"
+        Me.DyCheckbox1.Size = New System.Drawing.Size(43, 21)
+        Me.DyCheckbox1.TabIndex = 30
+        Me.DyCheckbox1.Text = "chi"
+        Me.DyCheckbox1.UseVisualStyleBackColor = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(558, 409)
         Me.ControlBox = False
-        Me.Controls.Add(Me.DyFlatButton3)
+        Me.Controls.Add(Me.DyCheckbox1)
         Me.Controls.Add(Me.DyTextboxBorder2)
         Me.Controls.Add(Me.DyTextboxBorder1)
         Me.Controls.Add(Me.DyColorPicker2)
@@ -188,6 +180,7 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.Text = "wclDigaly Test"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents DyFlatButton1 As wclDigaly.dyFlatButton
@@ -197,5 +190,5 @@ Partial Class Form1
     Friend WithEvents DyColorPicker2 As wclDigaly.dyColorPicker
     Friend WithEvents DyTextboxBorder1 As wclDigaly.dyTextboxBorder
     Friend WithEvents DyTextboxBorder2 As wclDigaly.dyTextboxBorder
-    Friend WithEvents DyFlatButton3 As wclDigaly.dyFlatButton
+    Friend WithEvents DyCheckbox1 As wclDigaly.dyCheckbox
 End Class

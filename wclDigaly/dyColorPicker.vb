@@ -5,6 +5,9 @@
     Dim dblBrightness As Double = 0.35
     Dim dblSaturation As Double = 0.7
     Dim colSelectedColor As Color = Color.Black
+    Dim colorTable As List(Of ColorTableEntry) = New List(Of ColorTableEntry)
+    Private intHoverColor As Integer = -1
+    Private intSelectedColor As Integer = -1
     Public Event SelectedColorChanged()
 
     Public Property BlockSize As Integer
@@ -56,11 +59,15 @@
         End Set
     End Property
 
+    Structure ColorTableEntry
+        Dim Color As Color
+        Dim Location As Point
+    End Structure
 
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
-
+        DoubleBuffered = True
         ' Add any initialization after the InitializeComponent() call.
         Recalculate()
     End Sub
@@ -70,37 +77,41 @@
         Dim intBlocksY As Integer = CInt(Math.Floor(Me.Height / (intBlockSize + intSpacing)))
         Dim intCount As Integer = 0
 
-        Me.Controls.Clear()
-
+        colorTable.Clear()
         For y As Integer = 1 To intBlocksY
             For x As Integer = 1 To intBlocksX
-                Dim newBlock As dyFlatButton = New dyFlatButton()
-                newBlock.Width = intBlockSize
-                newBlock.Height = intBlockSize
-                newBlock.Location = New Point((x - 1) * (intBlockSize + intSpacing) + intSpacing, (y - 1) * (intBlockSize + intSpacing) + intSpacing)
+                Dim tableEntry As ColorTableEntry = New ColorTableEntry()
 
-                Dim c As Color = FromAhsb(255, intCount * (360 / (intBlocksX * intBlocksY)), dblSaturation, dblBrightness)
-                newBlock.BackColor = c
-                newBlock.BorderWidth = 0
 
-                AddHandler newBlock.Click, AddressOf OnColorSelect
+                tableEntry.Location = New Point((x - 1) * (intBlockSize + intSpacing) + intSpacing, (y - 1) * (intBlockSize + intSpacing) + intSpacing)
+                tableEntry.Color = FromAhsb(255, intCount * (360 / (intBlocksX * intBlocksY)), dblSaturation, dblBrightness)
 
-                Me.Controls.Add(newBlock)
+                colorTable.Add(tableEntry)
 
                 intCount += 1
             Next
         Next
-    End Sub
 
-    Sub OnColorSelect(sender As Object, e As EventArgs)
-        Dim but As dyFlatButton = Convert.ChangeType(sender, GetType(dyFlatButton))
-
-        SelectedColor = but.BackColor
-        RaiseEvent SelectedColorChanged()
+        Invalidate()
     End Sub
 
     Protected Overrides Sub OnPaint(ByVal e As System.Windows.Forms.PaintEventArgs)
         MyBase.OnPaint(e)
+
+        Dim p As Pen = New Pen(BackColor)
+        p.Width = 2
+
+        For i As Integer = 0 To colorTable.Count - 1
+            e.Graphics.FillRectangle(New SolidBrush(colorTable(i).Color), New Rectangle(colorTable(i).Location.X, colorTable(i).Location.Y, intBlockSize, intBlockSize))
+
+            If i = intSelectedColor Then
+                e.Graphics.DrawRectangle(p, New Rectangle(colorTable(i).Location.X + p.Width * 2, colorTable(i).Location.Y + p.Width * 2, intBlockSize - p.Width * 4, intBlockSize - p.Width * 4))
+            End If
+
+            If i = intHoverColor Then
+                e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(50, 0, 0, 0)), New Rectangle(colorTable(i).Location.X, colorTable(i).Location.Y, intBlockSize, intBlockSize))
+            End If
+        Next
 
         'Add your custom paint code here
     End Sub
@@ -108,6 +119,45 @@
     Protected Overrides Sub OnResize(e As EventArgs)
         Recalculate()
         MyBase.OnResize(e)
+    End Sub
+
+    Protected Overrides Sub OnMouseClick(e As MouseEventArgs)
+        MyBase.OnMouseClick(e)
+
+        Dim blocksPerRow As Integer = CInt(Math.Floor(Me.Width / (intBlockSize + intSpacing)))
+        For i As Integer = 0 To colorTable.Count - 1
+            If e.X >= colorTable(i).Location.X And e.X < colorTable(i).Location.X + intBlockSize And e.Y >= colorTable(i).Location.Y And e.Y <= colorTable(i).Location.Y + intBlockSize Then
+                intSelectedColor = i
+                SelectedColor = colorTable(i).Color
+                RaiseEvent SelectedColorChanged()
+                Invalidate()
+                Return
+            End If
+        Next
+    End Sub
+
+    Protected Overrides Sub OnMouseLeave(e As EventArgs)
+        MyBase.OnMouseLeave(e)
+
+        intHoverColor = -1
+        Invalidate()
+    End Sub
+
+    Protected Overrides Sub OnMouseMove(e As MouseEventArgs)
+        MyBase.OnMouseMove(e)
+
+        intHoverColor = -1
+
+        Dim blocksPerRow As Integer = CInt(Math.Floor(Me.Width / (intBlockSize + intSpacing)))
+        For i As Integer = 0 To colorTable.Count - 1
+            If e.X >= colorTable(i).Location.X And e.X < colorTable(i).Location.X + intBlockSize And e.Y >= colorTable(i).Location.Y And e.Y <= colorTable(i).Location.Y + intBlockSize Then
+                intHoverColor = i
+                Invalidate()
+                Return
+            End If
+        Next
+
+        Invalidate()
     End Sub
 
 End Class
